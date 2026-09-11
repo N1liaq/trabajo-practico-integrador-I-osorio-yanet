@@ -9,8 +9,8 @@ import {
 
 const userRouter = Router();
 
-userRouter.post("/tag", createUser);
-userRouter.get("/tag", getAllUser);
-userRouter.get("/tag", getUserById);
-userRouter.put("/tag", updateUser);
-userRouter.delete("/tag", deleteUser);
+userRouter.post("/user", createUser);
+userRouter.get("/user", getAllUser);
+userRouter.get("/user", getUserById);
+userRouter.put("/user", updateUser);
+userRouter.delete("/user", deleteUser);
