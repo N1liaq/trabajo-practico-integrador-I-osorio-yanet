@@ -16,7 +16,7 @@ export const sequelize = new Sequelize(database, usuarioDB, contraDB, {
 export const startDB = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync();
+    await sequelize.sync({ force: true });
     console.log("Conexión a la BD esta lista.");
   } catch (error) {
     console.error("No se pudo conectar a la BD", error);

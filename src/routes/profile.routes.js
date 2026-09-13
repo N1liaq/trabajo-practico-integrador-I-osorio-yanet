@@ -9,8 +9,8 @@ import {
 
 const profileRouter = Router();
 
-profileRouter.post("/profile", createProfile);
-profileRouter.get("/profile", getAllProfile);
-profileRouter.get("/profile", getProfileById);
-profileRouter.put("/profile", updateProfile);
-profileRouter.delete("/profile", deleteProfile);
+profileRouter.post("/profiles", createProfile);
+profileRouter.get("/profiles", getAllProfile);
+profileRouter.get("/profiles/:id", getProfileById);
+profileRouter.put("/profiles/:id", updateProfile);
+profileRouter.delete("/profiles/:id", deleteProfile);

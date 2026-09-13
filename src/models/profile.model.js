@@ -11,7 +11,7 @@ export const ProfileModel = sequelize.define("Profile", {
     allowNull: false,
   },
   biography: {
-    type: DataTypes.TEXT,
+    type: DataTypes.STRING,
   },
   avatar_url: {
     type: DataTypes.STRING(255),
@@ -24,7 +24,7 @@ export const ProfileModel = sequelize.define("Profile", {
     allowNull: false,
     unique: true,
     references: {
-      model: "User",
+      model: "Users",
       key: "id",
     },
   },

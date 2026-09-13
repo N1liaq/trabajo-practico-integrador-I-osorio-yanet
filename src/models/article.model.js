@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/database.js";
+import { TagModel } from "./tag.model.js";
 
 export const ArticleModel = sequelize.define("Article", {
   title: {
@@ -7,7 +8,7 @@ export const ArticleModel = sequelize.define("Article", {
     allowNull: false,
   },
   content: {
-    type: DataTypes.TEXT(50),
+    type: DataTypes.STRING(50),
     allowNull: false,
   },
   excerpt: {
@@ -22,18 +23,18 @@ export const ArticleModel = sequelize.define("Article", {
     allowNull: false,
     unique: true,
     references: {
-      model: "User",
+      model: "Users",
       key: "id",
     },
   },
 });
 
-Article.belongsToMany(Tag, {
+ArticleModel.belongsToMany(TagModel, {
   through: "ArticleTag",
   as: "tags",
 });
 
-Tag.belongsToMany(Article, {
+TagModel.belongsToMany(ArticleModel, {
   through: "ArticleTag",
   as: "articles",
 });

@@ -9,8 +9,8 @@ import {
 
 const articleRouter = Router();
 
-articleRouter.post("/article", createArticle);
-articleRouter.get("/article", getAllArticle);
-articleRouter.get("/article", getArticleById);
-articleRouter.put("/article", updateArticle);
-articleRouter.delete("/article", deleteArticle);
+articleRouter.post("/articles", createArticle);
+articleRouter.get("/articles", getAllArticle);
+articleRouter.get("/articles/:id", getArticleById);
+articleRouter.put("/articles/:id", updateArticle);
+articleRouter.delete("/articles/:id", deleteArticle);

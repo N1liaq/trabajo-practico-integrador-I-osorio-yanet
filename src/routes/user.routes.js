@@ -7,10 +7,10 @@ import {
   updateUser,
 } from "../controllers/user.controller.js";
 
-const userRouter = Router();
+export const userRouter = Router();
 
-userRouter.post("/user", createUser);
-userRouter.get("/user", getAllUser);
-userRouter.get("/user", getUserById);
-userRouter.put("/user", updateUser);
-userRouter.delete("/user", deleteUser);
+userRouter.post("/users", createUser);
+userRouter.get("/users", getAllUser);
+userRouter.get("/users/:id", getUserById);
+userRouter.put("/users/:id", updateUser);
+userRouter.delete("/users/:id", deleteUser);
